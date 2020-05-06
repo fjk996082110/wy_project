@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <router-link to='/index'>主页</router-link>
+    <router-link to='/category'>分类</router-link>
+    <router-link to='/needBuy'>必买</router-link>
+    <router-link to='/shopCart'>购物车</router-link>
+    <router-link to='/personal'>个人</router-link> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" scoped>
+@import url('./common/iconfont/iconfont.styl');
+#app
+  width 100% !important
+  height 100% !important
+  overflow hidden !important
 </style>

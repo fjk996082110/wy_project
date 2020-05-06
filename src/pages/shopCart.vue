@@ -1,0 +1,15 @@
+<template>
+  <div>
+    shopCart
+  </div>
+</template>
+
+<script>
+export default {
+  name:'shopCart'
+}
+</script>
+
+<style lang="stylus" scoped>
+
+</style>
