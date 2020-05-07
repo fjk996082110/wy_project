@@ -105,6 +105,36 @@
             </div>
           </div>
         </div>
+        <!-- 类目热销榜 -->
+        <div class="hotSellContainer" v-if="indexData.categoryHotSellModule">
+          <div class="hotSellTitle">
+            <div class="title">{{indexData.categoryHotSellModule.title}}</div>
+          </div>
+          <div class="hotSellContent">
+            <div class="line1">
+              <div class="content1">
+                <div class="hotSellName">{{indexData.categoryHotSellModule.categoryList[0].categoryName}}</div>
+                <div class="hotSellImg">
+                  <img :src="indexData.categoryHotSellModule.categoryList[0].showPicUrl" alt="">
+                </div>
+              </div>
+              <div class="content1">
+                <div class="hotSellName">{{indexData.categoryHotSellModule.categoryList[1].categoryName}}</div>
+                <div class="hotSellImg">
+                  <img :src="indexData.categoryHotSellModule.categoryList[1].showPicUrl" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="line2">
+              <div class="item" v-for="(item, index) in categoryList" :key="index">
+                <div class="itemName">{{item.categoryName}}</div>
+                <div class="itemImage">
+                  <img :src="item.picUrl" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -127,7 +157,8 @@ export default {
         'https://yanxuan.nosdn.127.net/84d82137e854e58bf26791db3ba203b8.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
         'https://yanxuan.nosdn.127.net/3ebbdfa48590946eba80297c9a4a66c4.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
         'https://yanxuan.nosdn.127.net/ee856ce5b451dbdeab78abffce195957.jpg?type=webp&imageView&quality=75&thumbnail=750x0'
-      ]
+      ],
+      categoryList:[]
     }
   },
   async mounted(){
@@ -135,6 +166,8 @@ export default {
     this.renderSwiper()
     await this[GETINDEXCATEMODULE]()
     await this[GETINDEXDATA]()
+    let length = this.indexData.categoryHotSellModule.categoryList.length
+    this.categoryList = this.indexData.categoryHotSellModule.categoryList.slice(2,length)
   },
   methods: {
     ...mapActions([GETINDEXCATEMODULE,GETINDEXDATA]),

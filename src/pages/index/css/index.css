@@ -297,3 +297,82 @@
   background: #CBB693;
   border-radius: .05333rem;
 }
+.hotSellContainer{
+  width: 100%;
+  height: 710px;
+  margin-top: 10px;
+  padding: 20px 10px;
+}
+.hotSellTitle .title{
+  width: 100%;
+  height: 100px;
+  font-size: 35px;
+  line-height: 100px;
+}
+.hotSellContent .line1{
+  display: flex;
+}
+.hotSellContent .content1{
+  width: 340px;
+  height: 200px;
+  position: relative;
+  padding: 50px 20px;
+  background: #F9F3E4;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+.hotSellContent .content1:last-child{
+  background: #EBEFF6
+}
+.hotSellContent .content1 .hotSellName{
+  width: 120px;
+  font-size: 28px;
+  position: relative;
+}
+.hotSellContent .content1 .hotSellName::after{
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+}
+.hotSellContent .content1 .hotSellImg{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.hotSellContent .content1 .hotSellImg img{
+  width: 100%;
+  height: 100%;
+}
+.line2{
+  margin-top: 10px;
+}
+.line2 .item{
+  width: 165px;
+  height: 180px;
+  float: left;
+  margin: 0 15px 15px 0;
+  background: #F5F5F5;
+  border-radius: .05333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line2 .item .itemName{
+  margin-top: 10px;
+}
+.line2 .item .itemImage{
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+}
+.line2 .item .itemImage img{
+  width: 100%;
+  height: 100%;
+}

@@ -7,7 +7,7 @@ export default {
     commit(GETINDEXCATEMODULE,result)
   },
   async [GETINDEXDATA] ({commit}){
-    const result = await http.wrap.getIndexData()
+    let result = await http.wrap.getIndexData()
     commit(GETINDEXDATA,result)
   }
 }
