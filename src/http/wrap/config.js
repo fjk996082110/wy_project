@@ -12,5 +12,15 @@ export default {
       method:'get',
       corsUrl:'/3001'
     },
+    getIndexCateModule:{
+      url:'/getIndexCateModule',
+      method:'get',
+      corsUrl:'/3001'
+    },
+    getIndexData:{
+      url:'/getIndexData',
+      method:'get',
+      corsUrl:'/3001'
+    }
   }
 }

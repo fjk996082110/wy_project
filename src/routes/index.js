@@ -1,8 +1,8 @@
-import index from '../pages/index.vue'
-import category from '../pages/category.vue'
-import needBuy from '../pages/needBuy.vue'
-import personal from '../pages/personal.vue'
-import shopCart from '../pages/shopCart.vue'
+import index from '../pages/index/index.vue'
+import category from '../pages/category/category.vue'
+import needBuy from '../pages/needBuy/needBuy.vue'
+import personal from '../pages/personal/personal.vue'
+import shopCart from '../pages/shopCart/shopCart.vue'
 
 export default [
   {path:'/index',component:index},

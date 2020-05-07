@@ -1,0 +1,299 @@
+.indexContainer{
+  height:100%;
+  padding: 0 10px;
+}
+.indexContent{
+  height: 100%;
+  overflow: hidden;
+}
+.indexHeader{
+  height:148px;
+  background: #fff;
+}
+.headerTop{
+  height: 87.97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}        
+.logo{
+  width: 138px;
+  height: 40px;
+}
+.searchInput{
+  width: 442px;
+  height: .74667rem;
+  background: #ededed;
+  font-size: .37333rem;
+  line-height: .74667rem;
+  text-align: center;
+  border-radius: .10667rem;
+  margin: 0 .21333rem 0 .26667rem;
+  color: #666;
+}
+.searchInput .iconfont{
+  width: .37333rem;
+  height: .37333rem;
+  margin-right: .13333rem;
+  font-size: .45rem;
+}
+.userLogin{
+  width: .98667rem;
+  height: .53333rem;
+  font-size: .32rem;
+  color: #DD1A21;
+  line-height: .53333rem;
+  text-align: center;
+  border: 2px solid #DD1A21;
+  border-radius: .10667rem;
+}
+.navWrap{
+  width: 100%;
+  display: flex;
+  /* height: 60px; */
+  position: relative;
+  /* display: inline; */
+  overflow: hidden;
+}
+.scrollList{
+  display: flex;
+  line-height: 60px;
+  margin-right: 10px;
+  display: inline;
+  white-space: nowrap;
+  position: relative;
+}
+.navItem{
+  padding: 0 20px;
+  display: inline;
+}
+.navItem .txt{
+  font-size: 30px;
+  position: relative;
+}
+.navItem .txt.active::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: .05333rem;
+  background-color: #DD1A21;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.bannerWrap{
+  width: 100%;
+  height: 3.94667rem;
+  margin: 10px 0;
+}
+.swiper-container{
+  height: 100%;
+}
+.swiper-slide img{
+  width: 100%;
+  height: 100%;
+}
+.indexServicePolicy{
+  height: 72px;
+  line-height: 72px;
+}
+.growList{
+  display: flex;
+}
+.growList li{
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.growList li img{
+  margin-right: 10px;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.navList{
+  width: 100%;
+  height: 4.96rem;
+}
+.navList .navItem{
+  width: 100px;
+  height: 156px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemContent{
+  width: 100%;
+  height: 100%;
+}
+.navList .navItem img{
+  width: 1.46667rem;
+  height: 1.46667rem;
+}
+.navList .navItem span{
+  display: block;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+.bannerAdvanter{
+  width: 100%;
+  height: 240px;
+}
+.bannerAdvanter img{
+  width: 100%;
+  height: 100%;
+}
+.newUserGift{
+  width: 100%;
+  height: 558px;
+  margin-top: 20px;
+}
+.newUserGift .title{
+  width: 100%;
+  height: 90px;
+}
+.newUserGift .title span{
+  margin: 0 auto;
+  display: block;
+  width: 160px;
+  height: 90px;
+  font-size: .42667rem;
+  text-align: center;
+  line-height: 90px;
+  position: relative;
+}
+.newUserGift .title span::after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: -34px;
+  top: .6rem;
+  width: 24px;
+  height: 3px;
+  background: #333;
+}
+.newUserGift .title span::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 164px;
+  top: .6rem;
+  width: 24px;
+  height: 3px;
+  background: #333;
+}
+.newUserGift .content{
+  height: 443px;
+  display: flex;
+  justify-content: space-between;
+}
+.newUserGift .contentLeft{
+  width: 342px;
+  height: 443px;
+  background: #F9E9CF;
+}
+.newUserGift .contentLeft .leftName{
+  font-size: .42667rem;
+  padding: .4rem 0 0 .4rem;
+}
+.newUserGift .contentLeft .hongbao{
+  position: relative;
+}
+.newUserGift .contentLeft .hongbao img{
+  display: block;
+  margin: 50px auto;
+  width: 258px;
+  height: 258px;
+}
+.newUserGift .contentLeft .hongbao span{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 100px;
+  bottom: 15px;
+  z-index: 9;
+  color: white;
+}
+.newUserGift .contentRight{
+  width: 370px;
+  height: 443px;
+}
+.newUserGift .contentRight .content1{
+  width: 370px;
+  height: 215px;
+  background: #FBE2D3;
+  border-radius: 4px;
+  position: relative;
+}
+.contentRight .content1 .picWrap{
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.content1 .picWrap .picContent{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content1 .picWrap .picContent img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -15px;
+  top: 15px;
+}
+.content1 .picWrap .discount{
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  background: #F59524;
+  border-radius: 50%;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.content1 .picWrap .discount .line1{
+  font-size: 28px;
+  color: white;
+}
+.content1 .picWrap .discount .line2{
+  color: white;
+  font-size: 20px;
+  text-decoration: line-through;
+}
+.content1 .jieshao{
+  position: absolute;
+  left: 35px;
+  top: 35px;
+}
+.content1 .jieshao .title1{
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+.content1 .jieshao .title2{
+  font-size: 28px;
+  color: #7F7F7F;
+}
+.content2{
+  margin-top: 10px;
+  background: #FFECC2 !important;
+}
+.content2 .jieshao .title1{
+  font-size: 30px;
+}
+.content2 .jieshao .title2{
+  font-size: 28px;
+  height: .42667rem;
+  color: #fff;
+  background: #CBB693;
+  border-radius: .05333rem;
+}
