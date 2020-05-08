@@ -1,29 +1,24 @@
 <template>
   <div id="app">
-    <!-- <router-link to='/index'>主页</router-link>
-    <router-link to='/category'>分类</router-link>
-    <router-link to='/needBuy'>必买</router-link>
-    <router-link to='/shopCart'>购物车</router-link>
-    <router-link to='/personal'>个人</router-link> -->
     <router-view></router-view>
     <div class="footerNav">
-      <div class="item" :class="appIndex===0?'active':''" @click="changeRouter(0,'/index')">
+      <div class="item" :class="appIndex==='index'?'active':''" @click="changeRouter('/index')">
         <i class="iconfont icon-zhuye"></i>
         <span>首页</span>
       </div>
-      <div class="item" :class="appIndex===1?'active':''" @click="changeRouter(1,'/category')">
+      <div class="item" :class="appIndex==='category'?'active':''" @click="changeRouter('/category')">
         <i class="iconfont icon-nav-list"></i>
         <span>分类</span>
       </div>
-      <div class="item" :class="appIndex===2?'active':''" @click="changeRouter(2,'/needBuy')">
+      <div class="item" :class="appIndex==='needBuy'?'active':''" @click="changeRouter('/needBuy')">
         <i class="iconfont icon-all1"></i>
         <span>值得买</span>
       </div>
-      <div class="item" :class="appIndex===3?'active':''" @click="changeRouter(3,'/shopCart')">
+      <div class="item" :class="appIndex==='shopCart'?'active':''" @click="changeRouter('/shopCart')">
         <i class="iconfont icon-cart-full"></i>
         <span>购物车</span>
       </div>
-      <div class="item" :class="appIndex===4?'active':''" @click="changeRouter(4,'personal')">
+      <div class="item" :class="appIndex==='personal'?'active':''" @click="changeRouter('personal')">
         <i class="iconfont icon-account"></i>
         <span>个人</span>
       </div>
@@ -40,11 +35,16 @@ export default {
     }
   },
   methods: {
-    changeRouter(index,path){
-      this.appIndex = index
+    changeRouter(path){
+      // this.appIndex = this.$route.path.splice("/")
       this.$router.replace(path)
     }
   },
+  created(){
+    this.$watch('$route.path',(newVal,oldVal)=>{
+      this.appIndex = newVal.split("/")[1]
+    })
+  }
 }
 </script>
 

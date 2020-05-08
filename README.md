@@ -12,3 +12,13 @@
     The wrapper need at least one child element to be scroller
     Error in mounted hook (Promise/async): "TypeError: Cannot read property 'style' of undefined"
   ```
+## part2
+  分类
+  路由嵌套
+    跳转时携带id，通过id去查找下标，在组件被加载时，先调用一次，传0
+  初始化没数据
+    因为刚开始页面初始化时，没有内容，导致BScroll获取不到内容，报如下错误
+  ```js
+    Cannot read property 'style' of undefined"
+  ```
+    解决：通过watch监听路由变化，当路由发生变化时，再调用BScroll

@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     categoryList(){
-      return this.cateLists[this.detailId]
+      return this.cateLists[this.id]
     }
   },
   methods: {
@@ -41,10 +41,11 @@ export default {
       let result = await this.$http.wrap.getCateLists()
       this.cateLists = result
     },
+
   },
   async mounted(){
     await this.getCateLists()
-    const detailId = this.$route.params.id
+    // const detailId = this.$route.params.id
     this.$watch('$route.params.id',(newVal,oldVal)=>{
       this.detailId = newVal*1
     })

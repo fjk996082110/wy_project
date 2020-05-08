@@ -16,10 +16,10 @@
           </ul>
         </div>
         <div class="rightWrap" ref="rightWrap">
-          <keep-alive>
+          <!-- <keep-alive>
             <router-view></router-view>
-          </keep-alive>
-          
+          </keep-alive> -->
+          <router-view></router-view>
         </div>
       </div>
     </div>
@@ -48,15 +48,21 @@ export default {
       this.$router.replace(`/category/${index}`)
     },
     initScroll(){
-      if(this.$refs.rightWrap&&this.$refs.leftWrap){
-        new BScroll(this.$refs.leftWrap,{click:true})
-        new BScroll(this.$refs.rightWrap,{click:true})
-      }
+      this.$nextTick(()=>{
+        if(this.$refs.rightWrap){
+          new BScroll(this.$refs.leftWrap,{click:true})
+          new BScroll(this.$refs.rightWrap,{click:true})
+        }
+      })
     }
   },
-  async mounted(){
-    await this[GETCATENAVDATA](),
-    this.initScroll()
+  async created(){
+    await this[GETCATENAVDATA]()
+    this.changeCurrentIndex(0)
+    // this.initScroll()
+    this.$watch('$route.path',(newVal)=>{
+      this.initScroll()
+    })
   }
 }
 </script>
