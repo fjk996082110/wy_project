@@ -2,8 +2,8 @@
 export default {
   name:'wrap',
   api:{
-    getCateNavData:{
-      url:'/getCateNavData',
+    getCateNavDatas:{
+      url:'/getCateNavDatas',
       method:'get',
       corsUrl:'/3001'
     },
@@ -19,6 +19,11 @@ export default {
     },
     getIndexData:{
       url:'/getIndexData',
+      method:'get',
+      corsUrl:'/3001'
+    },
+    getCateLists:{
+      url:'/getCateLists',
       method:'get',
       corsUrl:'/3001'
     }
