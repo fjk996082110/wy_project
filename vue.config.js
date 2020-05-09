@@ -13,6 +13,13 @@ module.exports={
         pathRewrite:{
           "^/3001":""
         }
+      },
+      '/xhr/search': {
+        target: 'https://m.you.163.com/xhr/search',
+        changeOrigin: true,
+        pathRewrite:{
+          "^/xhr/search":""
+        }
       }
     }
   },

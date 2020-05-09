@@ -3,7 +3,7 @@
     <div class="categoryContent">
       <!-- 头部 -->
       <div class="categoryHeader">
-        <div class="searchInput">
+        <div class="searchInput" @click="$router.replace('/search')">
           <i class="iconfont icon-sousuo"></i>
           <span class="searchTitle">搜索商品, 共25372款好物</span>
         </div>

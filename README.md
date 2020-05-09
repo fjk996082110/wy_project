@@ -22,3 +22,8 @@
     Cannot read property 'style' of undefined"
   ```
     解决：通过watch监听路由变化，当路由发生变化时，再调用BScroll
+## part3
+  搜索
+    请求配置，代理解决跨域
+    函数节流
+    watch监听v-model数据，每次改变，500毫秒之外，调用请求
