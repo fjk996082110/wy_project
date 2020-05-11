@@ -1,7 +1,7 @@
 import axios from 'axios'
 import http from '../http/index'
 import {GETINDEXCATEMODULE,GETINDEXDATA,GETCATENAVDATA,GETCATELISTS,GETSEARCHVIEWINIT,
-  GETSEARCHKEYWORD} from './mutation_type'
+  GETSEARCHKEYWORD,GETNAVWRAP,GETMANUAL} from './mutation_type'
 
 export default {
   async [GETINDEXCATEMODULE]({commit}){
@@ -28,5 +28,13 @@ export default {
     // let result = await http.search.getSearchKeyWord(keyWordObj)
     let {data} = await axios.get(`http://localhost:8080/xhr/search/searchAutoComplete.json?keywordPrefix=${keyWord}`)
     commit(GETSEARCHKEYWORD,data)
+  },
+  async [GETNAVWRAP]({commit}){
+    let result = await http.needBuy.getNavWrap()
+    commit (GETNAVWRAP,result.data.navList)
+  },
+  async [GETMANUAL]({commit}){
+    let result = await http.needBuy.getManual()
+    commit (GETMANUAL,result.data)
   }
 }

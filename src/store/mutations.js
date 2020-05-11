@@ -1,5 +1,5 @@
 import {GETINDEXCATEMODULE,GETINDEXDATA,GETCATENAVDATA,GETCATELISTS,GETSEARCHVIEWINIT,
-  GETSEARCHKEYWORD} from './mutation_type'
+  GETSEARCHKEYWORD,GETNAVWRAP,GETMANUAL} from './mutation_type'
 
 export default {
   [GETINDEXCATEMODULE](state,cateNavData){
@@ -19,5 +19,11 @@ export default {
   },
   [GETSEARCHKEYWORD](state,searchResData){
     state.searchResList = searchResData.data
+  },
+  [GETNAVWRAP](state,navWrapData){
+    state.needBuyNavWrapList = navWrapData
+  },
+  [GETMANUAL](state,manualData){
+    state.manualList = manualData
   }
 }

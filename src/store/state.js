@@ -4,5 +4,7 @@ export default {
   categoryData:[],
   cateLists:[],
   searchViewInitList:[],
-  searchResList:[]
+  searchResList:[],
+  needBuyNavWrapList:[],
+  manualList:[]
 }

@@ -20,6 +20,13 @@ module.exports={
         pathRewrite:{
           "^/xhr/search":""
         }
+      },
+      '/topic/v1': {
+        target: 'https://m.you.163.com/topic/v1',
+        changeOrigin: true,
+        pathRewrite:{
+          "^/topic/v1":""
+        }
       }
     }
   },
